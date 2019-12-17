@@ -6,7 +6,7 @@
         <ul>
             <c:forEach var="tasks" items="${tasks}">
                 <li>
-                    <a href="%{pageContext.request.contextPath}/show?id=${tasks.id}">
+                    <a href="${pageContext.request.contextPath}/show?id=${tasks.id}">
                         <c:out value="${tasks.id}" />
                     </a>
                     ：<c:out value="${tasks.content}" />
