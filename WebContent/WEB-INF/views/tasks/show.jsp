@@ -8,9 +8,22 @@
 
                 <h2>id : ${tasks.id} のタスク詳細ページ</h2>
 
-                <p>タスク：<c:out value="${tasks.content}" /></p>
-                <p>作成日時：<fmt:formatDate value="${tasks.created_at}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
-               <p>更新日時：<fmt:formatDate value="${tasks.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>タイトル</th>
+                            <td><c:out value="${tasks.content}" /></td>
+                        </tr>
+                        <tr>
+                            <th>作成日時</th>
+                            <td><fmt:formatDate value="${tasks.created_at}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+                        </tr>
+                        <tr>
+                            <th>更新日時</th>
+                            <td><fmt:formatDate value="${tasks.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
                 <p><a href="${pageContext.request.contextPath}/edit?id=${tasks.id}">このタスクを編集する</a></p>
